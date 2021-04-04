@@ -53,9 +53,6 @@ const SideBar = (props) => {
       border-left: 5px solid ${props.color};
       padding-left: 0;
     }
-    div svg:hover * {
-      fill: ${props.color};
-    }
   `
   const Label = styled.div`
     text-align: left;
