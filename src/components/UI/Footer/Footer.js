@@ -17,16 +17,19 @@ const Footer = (props) => {
 
 const FooterContainer = styled.div`
   border-top: 1px solid #ccc;
-  width: 100%;
-  padding-top: 10px;
+  margin-top: 235px;
+  width: 280px;
+  height: 76px;
 `
 const InfoLinks = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #909090;
+  color: #828282;
+  padding-top: 10px;
   gap: 10px;
   font-size: 12px;
+  font-family: 'Noto Sans';
 `
 
 export default Footer

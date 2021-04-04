@@ -40,22 +40,22 @@ const Friends = () => {
 
 const Container = styled.div`
   display: grid;
-  margin: 10px 200px;
-  grid-gap: 2em;
+  margin: 20px 210px;
+  grid-gap: 20px;
   grid-template-columns: 1fr 8fr;
 `
 const SearchItems = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-right: 200px;
-  width: 700px;
-
-  grid-template-rows: repeat(3);
+  grid-template-columns: repeat(3);
+  width: 880px;
+  height: 40px;
   grid-gap: 10px;
 `
 const PostContainer = styled.div`
   grid-column-start: 1;
   grid-column-end: 4;
+  width: 880px;
+  height: 721px;
 `
 
 export default Friends

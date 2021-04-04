@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IoPeopleOutline } from 'react-icons/io5'
-import { BsPersonPlus, BsPersonPlusFill, BsPerson } from 'react-icons/bs'
-import {
-  AiOutlineMessage,
-  AiOutlineFire,
-  AiOutlineLike,
-  AiOutlineSearch,
-} from 'react-icons/ai'
-import { MdPets } from 'react-icons/md'
-import { FaUserAltSlash, FaUserCheck } from 'react-icons/fa'
+import users from '../../../icons/users.svg'
+import userfollow from '../../../icons/userfollow.svg'
+import userfollows from '../../../icons/userfollows.svg'
+import blackList from '../../../icons/black-list.svg'
+import pet from '../../../icons/pet.svg'
+import news from '../../../icons/new.svg'
+import comment from '../../../icons/comment.svg'
+import trending from '../../../icons/trending.svg'
+import recomendation from '../../../icons/recomendation.svg'
+import userplus from '../../../icons/userplus.svg'
+import search from '../../../icons/search.svg'
 
 const SideBar = (props) => {
   const Container = styled.div`
@@ -20,16 +21,18 @@ const SideBar = (props) => {
     border-radius: 4px;
     background-color: ${props.color};
     color: #fff;
-
-    height: fit-content;
-    width: 230px;
-    padding: 15px;
-    text-align: center;
+    width: 280px;
+    padding: 15px 0 15px 0;
+    /* text-align: center; */
+    text-indent: 95px;
+    font-family: 'Noto Sans';
+    font-size: 14px;
+    font-weight: 800;
   `
   const CategoryItem = styled.div`
-    border-radius: 4px;
     background-color: #ffffff;
-    width: 100%;
+    width: 280px;
+    height: fit-content;
     text-align: center;
     color: 'black';
   `
@@ -39,6 +42,7 @@ const SideBar = (props) => {
 
   const Item = styled.div`
     padding-top: 10px;
+    padding-left: 5px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -47,15 +51,25 @@ const SideBar = (props) => {
       transition: all 0.2s ease-in-out;
       background: #cccc;
       border-left: 5px solid ${props.color};
+      padding-left: 0;
+    }
+    div svg:hover * {
+      fill: ${props.color};
     }
   `
   const Label = styled.div`
     text-align: left;
-    text-indent: 2em;
-  `
-  const Icon = styled.div`
     margin-left: 10px;
-    size: 24;
+    font-family: 'Noto Sans';
+    font-size: 14px;
+    font-weight: 600;
+  `
+  const Icon = styled.svg`
+    margin-left: 14px;
+    width: 27px;
+    height: 27px;
+    background-image: no-repeat;
+    background-size: contain;
   `
 
   return (
@@ -64,71 +78,59 @@ const SideBar = (props) => {
       <CategoryItem>
         <MainItems>
           <Item>
-            <Icon>
-              <IoPeopleOutline size={24} />
-            </Icon>
+            <Icon style={{ backgroundImage: 'url(' + users + ')' }} />
             <Label>Мои друзья</Label>
           </Item>
 
           <Item>
-            <Icon>
-              <FaUserCheck size={24} />
-            </Icon>
+            <Icon style={{ backgroundImage: 'url(' + userfollow + ')' }} />
+
             <Label>Мои подписки</Label>
           </Item>
           <Item>
-            <Icon>
-              <BsPersonPlusFill size={24} />
-            </Icon>
+            <Icon style={{ backgroundImage: 'url(' + userfollows + ')' }} />
+
             <Label>Мои подписчики</Label>
           </Item>
           <Item>
-            <Icon>
-              <AiOutlineMessage size={24} />
-            </Icon>
+            <Icon style={{ backgroundImage: 'url(' + comment + ')' }} />
             <Label>Сообщения</Label>
           </Item>
         </MainItems>
         <Item>
-          <Icon>
-            <MdPets size={24} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + pet + ')' }} />
+
           <Label>Категория</Label>
         </Item>
         <Item>
-          <Icon>
-            <BsPerson size={24} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + news + ')' }} />
+
           <Label>Новые пользователи</Label>
         </Item>
         <Item>
-          <Icon>
-            <AiOutlineFire size={24} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + trending + ')' }} />
+
           <Label>Популярные люди</Label>
         </Item>
+
         <Item>
-          <Icon>
-            <AiOutlineLike size={24} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + recomendation + ')' }} />
+
           <Label>Рекомендации</Label>
         </Item>
         <Item>
-          <Icon>
-            <FaUserAltSlash size={24} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + blackList + ')' }} />
+
           <Label>Черный список</Label>
         </Item>
         <Item>
-          <Icon>
-            <BsPersonPlus size={25} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + userplus + ')' }} />
+
           <Label>Пригласить друзей</Label>
         </Item>
         <Item>
-          <Icon>
-            <AiOutlineSearch size={25} />
-          </Icon>
+          <Icon style={{ backgroundImage: 'url(' + search + ')' }} />
+
           <Label>Искать друзей</Label>
         </Item>
       </CategoryItem>

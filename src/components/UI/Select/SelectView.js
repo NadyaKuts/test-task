@@ -6,8 +6,8 @@ const customStyles = {
     ...styles,
 
     backgroundColor: 'white',
-    height: 50,
-    width: 200,
+    height: 40,
+    width: 169,
     border: 'none',
     cursor: 'pointer',
   }),

@@ -6,51 +6,70 @@ import {
   NavBtn,
   NavBtnLink,
 } from './NavbarElements'
-import {
-  AiOutlineHome,
-  AiOutlineMessage,
-  AiOutlineSearch,
-  AiOutlinePlayCircle,
-  AiOutlineUsergroupAdd,
-  AiOutlineShop,
-  AiOutlineShoppingCart,
-  AiOutlineBook,
-} from 'react-icons/ai'
-import { BsPerson } from 'react-icons/bs'
+
 import NavbarItem from './NavbarItem'
 import Colors from '../../../constants/Colors'
 import styled from 'styled-components'
 
+import home from '../../../icons/home.svg'
+import messenger from '../../../icons/messenger.svg'
+import friends from '../../../icons/friends.svg'
+import groups from '../../../icons/groups.svg'
+import media from '../../../icons/media.svg'
+import booking from '../../../icons/booking.svg'
+import market from '../../../icons/market.svg'
+import library from '../../../icons/library.svg'
+import search from '../../../icons/search.svg'
+
 const Navbar = () => {
-  const Div = styled.div`
-    display: block;
-    height: 2rem;
-
-    justify-content: center;
-    align-items: center;
+  const Icon = styled.svg`
+    margin-left: 37px;
+    margin-right: 38px;
+    margin-top: 10px;
+    width: 27px;
+    height: 27px;
+    background-image: no-repeat;
+    background-size: contain;
   `
-  const Logo = styled.h1`
-    font-size: 30px;
+  const Search = styled.svg`
+    margin: 10px;
+    width: 27px;
+    height: 27px;
+    background-image: no-repeat;
+    background-size: contain;
+    &:hover {
+    }
+  `
+
+  const Logo = styled.div`
+    font-size: 36px;
+    text-align: right;
     color: #9e9494;
-    width: 230px;
+    margin-left: 183px;
+    width: 160px;
+    height: 40px;
+    margin-top: 13px;
+    margin-bottom: 14px;
+    font-family: 'Noto Sans';
+    font-weight: 900;
   `
 
-  const Wrapper = styled.div`
+  const Marker = styled.div`
     position: absolute;
     width: 0;
     height: 0;
-    margin-left: 50px;
-    border-width: 100px 20px 20px;
+    margin-left: 88px;
+    border-width: 100px 17px 17px;
     border-style: solid;
     border-color: ${Colors.active.friends} ${Colors.active.friends} #ffffff;
   `
   const Line = styled.div`
     position: absolute;
     font-size: 30px;
-    margin-top: 20px;
-    margin-left: -20px;
-    height: 100vh;
-    width: 40px;
+    margin-top: 17px;
+    margin-left: -17px;
+    height: 921px;
+    width: 34px;
     float: right;
     color: ${Colors.active.friends};
     background: #ffff;
@@ -64,31 +83,27 @@ const Navbar = () => {
   return (
     <>
       <NawWrap>
-        <Wrapper>
+        <Marker>
           <Line>
             <LineLabel>friends</LineLabel>
           </Line>
-        </Wrapper>
+        </Marker>
         <NavContainer>
-          <Logo>LOGOLOGO</Logo>
+          <Logo>LOGOGO</Logo>
           <NavMenu>
             <NavbarItem
               to='/home'
               activeColor={Colors.active.home}
               label='Домой'
             >
-              <Div>
-                <AiOutlineHome size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + home + ')' }} />
             </NavbarItem>
             <NavbarItem
               to='/friends'
               activeColor={Colors.active.friends}
               label='Друзья'
             >
-              <Div>
-                <BsPerson size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + friends + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -96,9 +111,7 @@ const Navbar = () => {
               activeColor={Colors.active.messages}
               label='Cообщения'
             >
-              <Div>
-                <AiOutlineMessage size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + messenger + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -106,9 +119,7 @@ const Navbar = () => {
               activeColor={Colors.active.groups}
               label='Группы'
             >
-              <Div>
-                <AiOutlineUsergroupAdd size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + groups + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -116,9 +127,7 @@ const Navbar = () => {
               activeColor={Colors.active.media}
               label='Медиа'
             >
-              <Div>
-                <AiOutlinePlayCircle size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + media + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -126,9 +135,7 @@ const Navbar = () => {
               activeColor={Colors.active.places}
               label='Места'
             >
-              <Div>
-                <AiOutlineShop size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + booking + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -136,9 +143,7 @@ const Navbar = () => {
               activeColor={Colors.active.market}
               label='Маркет'
             >
-              <Div>
-                <AiOutlineShoppingCart size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + market + ')' }} />
             </NavbarItem>
 
             <NavbarItem
@@ -146,13 +151,11 @@ const Navbar = () => {
               activeColor={Colors.active.library}
               label='Библиотека'
             >
-              <Div>
-                <AiOutlineBook size={30} />
-              </Div>
+              <Icon style={{ backgroundImage: 'url(' + library + ')' }} />
             </NavbarItem>
             <NavBtn>
               <NavBtnLink to='#'>
-                <AiOutlineSearch size={25} />
+                <Search style={{ backgroundImage: 'url(' + search + ')' }} />
               </NavBtnLink>
             </NavBtn>
           </NavMenu>

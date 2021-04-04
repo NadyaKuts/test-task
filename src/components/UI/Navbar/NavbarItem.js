@@ -12,19 +12,17 @@ const NavbarItem = (props) => {
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 0 1rem 1rem;
-    padding-top: 0.6rem;
-    margin-top: 0.1rem;
-    border-radius: 0.3rem;
-    margin-inline: 0.05rem;
-    height: 25px;
+    border-radius: 4px;
+    margin-right: 0.1em;
 
-    width: 80px;
-    margin-top: ${showLabel ? '0.7rem' : ''};
-    height: ${showLabel ? '35px' : ''};
-    margin-top: ${isActive ? '0.7rem' : ''};
-    height: ${isActive ? '35px' : ''};
-
+    height: 47px;
+    width: 102px;
+    margin-top: ${showLabel ? '10px' : ''};
+    height: ${showLabel ? '55px' : ''};
+    margin-top: ${isActive ? '10px' : ''};
+    height: ${isActive ? '55px' : ''};
+    font-family: 'Noto Sans';
+    font-size: 13px;
     cursor: pointer;
     &:active {
       background: ${props.activeColor};
@@ -33,7 +31,7 @@ const NavbarItem = (props) => {
       transition: all 0.2s ease-in-out;
       background: ${props.navLink};
       color: #ffffff;
-      height: 35px;
+      height: 55px;
       margin-top: 10px;
     }
   `
