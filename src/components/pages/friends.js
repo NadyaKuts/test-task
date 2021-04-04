@@ -8,17 +8,6 @@ import ProfilePost from '../UI/Post/ProfilePost'
 import Footer from '../UI/Footer/Footer'
 
 const Friends = () => {
-  const countries = [
-    { value: 'belarus', label: 'Беларусь' },
-    { value: 'russia', label: 'Россия' },
-    { value: 'german', label: 'Германия' },
-  ]
-
-  const cites = [
-    { value: 'minsk', label: 'Минск' },
-    { value: 'moscow', label: 'Москва' },
-    { value: 'berlin', label: 'Берлин' },
-  ]
   return (
     <>
       <Container>
