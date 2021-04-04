@@ -13,12 +13,12 @@ const NavbarItem = (props) => {
     text-decoration: none;
     text-align: center;
     border-radius: 4px;
-    margin-right: 0.1em;
-
+    margin-right: 1px;
     height: 47px;
     width: 102px;
     margin-top: ${showLabel ? '10px' : ''};
     height: ${showLabel ? '55px' : ''};
+    width: ${showLabel ? '102px' : ''};
     margin-top: ${isActive ? '10px' : ''};
     height: ${isActive ? '55px' : ''};
     font-family: 'Noto Sans';
@@ -32,6 +32,7 @@ const NavbarItem = (props) => {
       background: ${props.navLink};
       color: #ffffff;
       height: 55px;
+      width: 102px;
       margin-top: 10px;
     }
   `

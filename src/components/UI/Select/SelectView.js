@@ -1,5 +1,6 @@
 import React from 'react'
-import Select from 'react-select'
+import styled from 'styled-components'
+import arrow from '../../../icons/arrow.svg'
 
 const customStyles = {
   control: (styles, { isDisabled, isFocused, isSelected }) => ({
@@ -24,13 +25,34 @@ const customStyles = {
   },
 }
 
+const Select = styled.div`
+  background-color: white;
+  border-radius: 4px;
+`
+const SelectBar = styled.select`
+  width: 170px;
+  height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default arrow */
+  border: none;
+  font-size: 13px;
+  font-family: 'Noto Sans';
+  font-weight: bold;
+`
 const SelectView = (props) => {
   return (
-    <Select
-      placeholder={props.placeholder}
-      styles={customStyles}
-      options={props.options}
-    />
+    <Select>
+      <SelectBar
+        style={{
+          background: 'url(' + arrow + ')  10px no-repeat',
+          backgroundPosition: 'right 10px bottom 15px',
+          paddingLeft: '10px',
+        }}
+      >
+        <option default>{props.placeholder}</option>
+      </SelectBar>
+    </Select>
   )
 }
 

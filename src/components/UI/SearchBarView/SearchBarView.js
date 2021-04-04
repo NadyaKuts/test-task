@@ -9,7 +9,6 @@ const SearchBarView = () => {
         <SearchBar
           style={{
             background: 'url(' + search + ')  10px no-repeat',
-            // backgroundSize: '100%',
           }}
           placeholder={'Поиск друзей'}
         />
@@ -23,15 +22,15 @@ const Search = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 4px;
+  width: 510px;
 `
 
 const SearchBar = styled.input`
   padding-left: 38px;
-  width: 472px;
+  width: 100%;
   border: none;
   height: 40px;
   border-radius: 4px;
-  margin-right: 10px;
   font-family: 'Noto Sans';
   font-size: 13px;
 `
