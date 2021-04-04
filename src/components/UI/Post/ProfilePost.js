@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiOutlineMore, AiOutlineLike } from 'react-icons/ai'
 import ReactPlayer from 'react-player'
 
-import { RiShareForwardLine, RiMessage2Line } from 'react-icons/ri'
 import profilePhoto from '../../../photo/Ellipse 74.png'
 import appraisal from '../../../icons/appraisal.svg'
 import comment from '../../../icons/comment.svg'
@@ -79,7 +77,7 @@ const ProfileName = styled.div`
   font-size: 13px;
   margin-top: 32px;
   margin-left: 10px;
-  font-weight: bold;
+  font-weight: 900;
 `
 const ProfileOnline = styled.div`
   font-family: 'Noto Sans';

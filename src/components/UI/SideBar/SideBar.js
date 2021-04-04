@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import users from '../../../icons/users.svg'
-import userfollow from '../../../icons/userfollow.svg'
-import userfollows from '../../../icons/userfollows.svg'
-import blackList from '../../../icons/black-list.svg'
-import pet from '../../../icons/pet.svg'
-import news from '../../../icons/new.svg'
-import comment from '../../../icons/comment.svg'
-import trending from '../../../icons/trending.svg'
-import recomendation from '../../../icons/recomendation.svg'
-import userplus from '../../../icons/userplus.svg'
-import search from '../../../icons/search.svg'
+import { ReactComponent as Users } from '../../../icons/users.svg'
+import { ReactComponent as Userfollow } from '../../../icons/userfollow.svg'
+import { ReactComponent as Userfollows } from '../../../icons/userfollows.svg'
+import { ReactComponent as BlackList } from '../../../icons/black-list.svg'
+import { ReactComponent as Pet } from '../../../icons/pet.svg'
+import { ReactComponent as News } from '../../../icons/new.svg'
+import { ReactComponent as Comment } from '../../../icons/comment.svg'
+import { ReactComponent as Trending } from '../../../icons/trending.svg'
+import { ReactComponent as Recomendation } from '../../../icons/recomendation.svg'
+import { ReactComponent as Userplus } from '../../../icons/userplus.svg'
+import { ReactComponent as Search } from '../../../icons/search.svg'
+import Colors from '../../../constants/Colors'
 
 const SideBar = (props) => {
   const Container = styled.div`
@@ -52,6 +53,8 @@ const SideBar = (props) => {
       background: #cccc;
       border-left: 5px solid ${props.color};
       padding-left: 0;
+      stroke: ${props.color};
+      fill: ${props.color};
     }
   `
   const Label = styled.div`
@@ -75,58 +78,64 @@ const SideBar = (props) => {
       <CategoryItem>
         <MainItems>
           <Item>
-            <Icon style={{ backgroundImage: 'url(' + users + ')' }} />
+            <Users style={{ marginLeft: '14px' }} />
+
             <Label>Мои друзья</Label>
           </Item>
 
           <Item>
-            <Icon style={{ backgroundImage: 'url(' + userfollow + ')' }} />
+            <Userfollow
+              style={{ marginLeft: '14px', width: '27px', height: '27px' }}
+            />
 
             <Label>Мои подписки</Label>
           </Item>
           <Item>
-            <Icon style={{ backgroundImage: 'url(' + userfollows + ')' }} />
+            <Userfollows style={{ marginLeft: '14px' }} />
 
             <Label>Мои подписчики</Label>
           </Item>
           <Item>
-            <Icon style={{ backgroundImage: 'url(' + comment + ')' }} />
+            <Comment style={{ marginLeft: '14px' }} />
+
             <Label>Сообщения</Label>
           </Item>
         </MainItems>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + pet + ')' }} />
+          <Pet style={{ marginLeft: '14px' }} />
 
           <Label>Категория</Label>
         </Item>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + news + ')' }} />
+          <News style={{ marginLeft: '14px', fill: 'black' }} />
 
           <Label>Новые пользователи</Label>
         </Item>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + trending + ')' }} />
+          <Trending
+            style={{ marginLeft: '14px', width: '27px', height: '27px' }}
+          />
 
           <Label>Популярные люди</Label>
         </Item>
 
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + recomendation + ')' }} />
+          <Recomendation style={{ marginLeft: '14px' }} />
 
           <Label>Рекомендации</Label>
         </Item>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + blackList + ')' }} />
+          <BlackList style={{ marginLeft: '14px' }} />
 
           <Label>Черный список</Label>
         </Item>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + userplus + ')' }} />
+          <Userplus style={{ marginLeft: '14px' }} />
 
           <Label>Пригласить друзей</Label>
         </Item>
         <Item>
-          <Icon style={{ backgroundImage: 'url(' + search + ')' }} />
+          <Search style={{ marginLeft: '14px' }} />
 
           <Label>Искать друзей</Label>
         </Item>

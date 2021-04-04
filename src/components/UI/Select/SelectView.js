@@ -10,6 +10,8 @@ const customStyles = {
     width: 169,
     border: 'none',
     cursor: 'pointer',
+    fontFamily: 'Noto Sans',
+    fontSize: 12,
   }),
   option: (styles, { isDisabled, isFocused, isSelected }) => {
     return {

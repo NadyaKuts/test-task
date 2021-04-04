@@ -6,7 +6,7 @@ import App from './App'
 
 WebFont.load({
   google: {
-    families: ['Noto Sans'],
+    families: ['Noto Sans', 'Noto Sans Bold'],
   },
 })
 

@@ -27,16 +27,17 @@ export const NavBtnLink = styled(Link)`
   border-radius: 4px;
   width: 47px;
   height: 47px;
+
   background: ${Colors.navLink};
   color: #fff;
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin-left: 10px;
+  margin-left: 8px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    fill: #fff;
+    color: black;
   }
 `

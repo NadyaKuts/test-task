@@ -10,7 +10,7 @@ import {
 import NavbarItem from './NavbarItem'
 import Colors from '../../../constants/Colors'
 import styled from 'styled-components'
-
+import { AiOutlineSearch } from 'react-icons/ai'
 import home from '../../../icons/home.svg'
 import messenger from '../../../icons/messenger.svg'
 import friends from '../../../icons/friends.svg'
@@ -19,7 +19,7 @@ import media from '../../../icons/media.svg'
 import booking from '../../../icons/booking.svg'
 import market from '../../../icons/market.svg'
 import library from '../../../icons/library.svg'
-import search from '../../../icons/search.svg'
+import { ReactComponent as Logogo } from '../../../icons/LOGOGO.svg'
 
 const Navbar = () => {
   const Icon = styled.svg`
@@ -31,27 +31,14 @@ const Navbar = () => {
     background-image: no-repeat;
     background-size: contain;
   `
-  const Search = styled.svg`
-    margin: 10px;
-    width: 27px;
-    height: 27px;
-    background-image: no-repeat;
-    background-size: contain;
-    &:hover {
-    }
-  `
 
   const Logo = styled.div`
-    font-size: 36px;
-    text-align: right;
-    color: #9e9494;
+    float: right;
     margin-left: 183px;
     width: 160px;
     height: 40px;
-    margin-top: 13px;
-    margin-bottom: 14px;
-    font-family: 'Noto Sans';
-    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 13px;
   `
 
   const Marker = styled.div`
@@ -89,7 +76,10 @@ const Navbar = () => {
           </Line>
         </Marker>
         <NavContainer>
-          <Logo>LOGOGO</Logo>
+          <Logo>
+            <Logogo />
+          </Logo>
+
           <NavMenu>
             <NavbarItem
               to='/home'
@@ -155,7 +145,10 @@ const Navbar = () => {
             </NavbarItem>
             <NavBtn>
               <NavBtnLink to='#'>
-                <Search style={{ backgroundImage: 'url(' + search + ')' }} />
+                <AiOutlineSearch
+                  style={{ paddingTop: '10px', paddingLeft: '10px' }}
+                  size={27}
+                />
               </NavBtnLink>
             </NavBtn>
           </NavMenu>
