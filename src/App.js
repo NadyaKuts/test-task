@@ -10,7 +10,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <Navbar />
-      <Route exact path='/friends' component={Friends} />
+      <Route path='/friends' component={Friends} />
     </Router>
   )
 }
