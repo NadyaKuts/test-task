@@ -26,7 +26,7 @@ const Navbar = () => {
     margin-left: 37px;
     margin-right: 38px;
     margin-top: 10px;
-    width: 26px;
+    width: 25px;
     height: 27px;
     background-image: no-repeat;
     background-size: contain;
